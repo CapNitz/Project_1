@@ -52,5 +52,6 @@ mintNFT("Larry","Hazel","grandad","dogtags");
 mintNFT("Ariana","Blue","Black-Top","Neck-Band");
 mintNFT("Christine","Green","Tunic","chrome-earrings");
 mintNFT("Sybil","Grey","Crop-Top","piercings");
+mintNFT("Nickie","Black","Sweat-Shirts","Shades");
 listNFTs();
 getTotalSupply();
