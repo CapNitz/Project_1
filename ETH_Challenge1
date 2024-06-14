@@ -1,0 +1,53 @@
+//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+contract challange1{
+    uint private a;
+    string private b;
+    address private c;
+    bool private d;
+
+//set and get functions for a unassigned int variable 
+    function setNumber (uint number)
+    public view returns (uint){
+        number = a;
+        return a;
+    }
+    function getNumber()
+    public view returns (uint){
+        return a;
+    }
+
+//set and get functions for string variable
+    function setString (string memory someString)
+    public {
+        b = someString;
+    }
+    function getString()
+    public view returns (string memory){
+        return b;
+    }
+
+// set and get some address using functions 
+    function setAddress (address someAddress)
+    public view returns (address){
+        someAddress = c;
+        return c;
+    }
+    function getAddress()
+    public view returns (address){
+        return c;
+    }
+
+// set and get some boolean values using functions 
+    function setBool (bool flag)
+    public view returns (bool){
+        flag = d;
+        return d;
+    }
+    function getBool()
+    public view returns (bool){
+        return d;
+    }
+
+}
