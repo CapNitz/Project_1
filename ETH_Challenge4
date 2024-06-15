@@ -1,0 +1,23 @@
+//SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+contract arithmeticFunctions{
+    
+    function add(uint a, uint b) external pure returns(uint){
+        uint sum = a + b;
+        return sum;
+    }
+
+    function sub(uint a, uint b) external pure returns(uint){
+        uint dif = a - b;
+        return dif;
+    }
+    function pro(uint a, uint b) external pure returns(uint){
+        uint prod = a * b;
+        return prod;
+    }
+    function div(uint a, uint b) external pure returns(uint){
+        uint rem = a / b;
+        return rem;
+    }    
+}
