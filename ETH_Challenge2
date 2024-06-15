@@ -1,0 +1,41 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+contract EtherConverter {
+
+    // Event emitted when Ether is received
+    event EtherReceived(address sender, uint256 amount);
+
+    // Function to receive Ether
+    receive() external payable {
+        emit EtherReceived(msg.sender, msg.value);
+    }
+    
+    // Function to convert the received ether value into wei, gwei, and ether
+    function converter(uint256 amountInEther) public pure returns (uint256 inWei, uint256 inGwei, uint256 inEther) {
+        inEther = amountInEther; 
+        inWei = amountInEther * 1 ether; 
+        inGwei = inWei / 1 gwei; 
+    }
+
+    // Function to display the converted values
+    function display(uint256 amountInEther) external pure returns (uint256 inEther, uint256 inWei, uint256 inGwei) {
+        (inWei, inGwei, inEther) = converter(amountInEther);
+        return (inEther, inWei, inGwei);
+    }
+
+    // Function to get the contract balance in wei
+    function getBalanceInWei() public view returns (uint256) {
+        return address(this).balance;
+    }
+
+    // Function to get the contract balance in ether
+    function getBalanceInEther() public view returns (uint256) {
+        return address(this).balance / 1 ether;
+    }
+
+    // Function to get the contract balance in gwei
+    function getBalanceInGwei() public view returns (uint256) {
+        return address(this).balance / 1 gwei;
+    }
+}
